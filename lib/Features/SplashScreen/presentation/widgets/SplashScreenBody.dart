@@ -5,6 +5,8 @@ const SplashScreenBody({ super.key });
 
   @override
   Widget build(BuildContext context){
-    return Container();
+    return Container(
+      width: 30,
+    );
   }
 }
