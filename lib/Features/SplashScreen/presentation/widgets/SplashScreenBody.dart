@@ -27,7 +27,7 @@ class _SplashScreenBodyState extends State<SplashScreenBody>{
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Image.asset(AssetsData.SplashScreenPhoto),
+            Image.asset(AssetsData.Logo),
             const SizedBox(
               height: 4,
             ),
