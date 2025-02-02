@@ -1,5 +1,7 @@
+import 'package:bookly_app/core/utils/Colors.dart';
 import 'package:bookly_app/core/utils/styles.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../views/widgets/BookListView.dart';
 import '../views/widgets/CustomAppBar.dart';
 import '../views/widgets/CustomListViewItem.dart';
@@ -22,34 +24,6 @@ class HomewViewBody extends StatelessWidget {
         ),
         SizedBox(height: 20,),
 
-      ],
-    );
-  }
-}
-
-class BestSellerListViewItem extends StatelessWidget {
-  const BestSellerListViewItem({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: [
-        CustomListViewItem(Width: 2.5),
-        const SizedBox(width:30 ,),
-         Column(
-          children: [
-            SizedBox(
-              width: MediaQuery.of(context).size.width*0.5,
-              child:const Text(
-                'Harry Potter and the Goblet of Fire',
-                style: Styles.textStyle20,
-                overflow: TextOverflow.ellipsis,
-                maxLines: 2,
-              ),
-            ),
-
-          ],
-        )
       ],
     );
   }

@@ -1,8 +1,8 @@
-import 'package:bookly_app/Features/SplashScreen/Constants/Colors.dart';
 import 'package:bookly_app/Features/SplashScreen/presentation/views/SplashScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'core/utils/Colors.dart';
 
 void main() {
   runApp(const MyApp());

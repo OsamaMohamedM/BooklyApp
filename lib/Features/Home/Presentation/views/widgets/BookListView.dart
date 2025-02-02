@@ -13,8 +13,8 @@ class BookListView extends StatelessWidget {
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) {
-        return const Padding(
-          padding: EdgeInsets.symmetric(horizontal: 8.0),
+        return  Padding(
+          padding:const EdgeInsets.symmetric(horizontal: 8.0),
           child:  CustomListViewItem(),
         );
       }),
