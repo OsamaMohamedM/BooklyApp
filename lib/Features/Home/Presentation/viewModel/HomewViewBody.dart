@@ -4,7 +4,7 @@ import '../views/widgets/BookListView.dart';
 import '../views/widgets/CustomAppBar.dart';
 
 class HomewViewBody extends StatelessWidget {
-  const HomewViewBody({Key? key}) : super(key: key);
+  const HomewViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -2,6 +2,7 @@ import 'package:bookly_app/Features/SplashScreen/Constants/Colors.dart';
 import 'package:bookly_app/Features/SplashScreen/presentation/views/SplashScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,8 +14,9 @@ const MyApp({ super.key });
   Widget build(BuildContext context){
     return GetMaterialApp (
       debugShowCheckedModeBanner: false,
-      theme: ThemeData.dark().copyWith(
-        scaffoldBackgroundColor: MyColors.scaffoldBackGround
+      theme: ThemeData.dark().copyWith( 
+        scaffoldBackgroundColor: MyColors.scaffoldBackGround,
+        textTheme: GoogleFonts.montserratTextTheme(ThemeData.dark().textTheme),
       ) ,
       home : const SplashScreen()
     );
