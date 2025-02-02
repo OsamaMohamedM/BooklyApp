@@ -12,10 +12,23 @@ class HomewViewBody extends StatelessWidget {
       children: [
         CustomAppBar(),
         BookListView(),
-        SizedBox(height: 50,),
-        Text('Best Seller', style: Styles.titleMedium,)
+        SizedBox(
+          height: 50,
+        ),
+        Text(
+          'Best Seller',
+          style: Styles.textStyle18,
+        )
       ],
     );
   }
 }
 
+class BestSellerListViewItem extends StatelessWidget {
+  const BestSellerListViewItem({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
+}
