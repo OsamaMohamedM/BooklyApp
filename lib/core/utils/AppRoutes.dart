@@ -4,9 +4,9 @@ import 'package:bookly_app/Features/SplashScreen/presentation/views/SplashScreen
 import 'package:go_router/go_router.dart';
 
 abstract class AppRoutes {
-  static const String homeScreen = 'Home';
+  static const String homeScreen = '/Home';
   static const String splashScreen = '/';
-  static const String bookDetails = 'BookDetails';
+  static const String bookDetails = '/BookDetails';
   static final router = GoRouter(routes: [
     GoRoute(
         path: splashScreen, builder: (context, state) => const SplashScreen()),
