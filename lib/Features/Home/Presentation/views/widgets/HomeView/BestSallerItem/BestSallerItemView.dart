@@ -2,8 +2,8 @@ import 'package:bookly_app/Features/Home/Presentation/views/widgets/BookRating.d
 import 'package:bookly_app/core/utils/assets.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../../core/utils/styles.dart';
-import 'CustomBookImage.dart';
+import '../../../../../../../core/utils/styles.dart';
+import '../../CustomBookImage.dart';
 
 class BestSellerListViewItem extends StatelessWidget {
   const BestSellerListViewItem({super.key});
@@ -14,7 +14,7 @@ class BestSellerListViewItem extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 8.0),
       child: Row(
         children: [
-          SizedBox(
+          const SizedBox(
               height: 120,
               child: CustomBookImage(
                 width: 2.5,

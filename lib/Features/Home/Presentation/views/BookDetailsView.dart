@@ -1,6 +1,6 @@
-import 'package:bookly_app/Features/Home/Presentation/views/widgets/BookDetailsViewBody.dart';
 import 'package:flutter/material.dart';
 import '../../../../core/utils/Colors.dart';
+import 'widgets/BookDetailsView/BookDetailsViewBody.dart';
 class BookDetailsView extends StatelessWidget {
   const BookDetailsView({super.key});
 
@@ -16,7 +16,7 @@ class BookDetailsView extends StatelessWidget {
         ),
         body: const SafeArea(
             child: Padding(
-          padding: EdgeInsets.symmetric(horizontal:0),
+          padding: EdgeInsets.symmetric(horizontal:10),
           child: BookDetailsViewBody(),
         )));
   }

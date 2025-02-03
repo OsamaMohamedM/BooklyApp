@@ -1,8 +1,8 @@
-import 'package:bookly_app/Features/Home/Presentation/views/widgets/BestSallerItemView.dart';
+import 'package:bookly_app/Features/Home/Presentation/views/widgets/HomeView/BestSallerItem/BestSallerItemView.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../../../../core/utils/AppRoutes.dart';
+import '../../../../../../../core/utils/AppRoutes.dart';
 
 class BestSallerListView extends StatelessWidget {
   const BestSallerListView({
