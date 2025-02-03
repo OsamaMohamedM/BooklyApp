@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 
 import '../../../../../core/utils/assets.dart';
 
-class CustomListViewItem extends StatelessWidget {
- final String imageData;
+class CustomBookImage extends StatelessWidget {
+  final String imageData;
   final double width;
   final double height;
 
-  CustomListViewItem({
-    this.imageData = AssetsData.Logo,    
+  const CustomBookImage({
+    this.imageData = AssetsData.Logo,
     this.width = 2.7,
     this.height = 4.0,
     super.key,
@@ -17,12 +17,12 @@ class CustomListViewItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
-      aspectRatio: width / height ,
+      aspectRatio: width / height,
       child: Container(
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(16),
             color: Colors.red,
-            image:  DecorationImage(
+            image: DecorationImage(
                 image: AssetImage(imageData), fit: BoxFit.fill)),
       ),
     );
