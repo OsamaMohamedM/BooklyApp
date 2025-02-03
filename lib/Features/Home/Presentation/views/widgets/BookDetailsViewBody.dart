@@ -1,11 +1,11 @@
+import 'package:bookly_app/Features/Home/Presentation/views/widgets/BookDescription.dart';
+import 'package:bookly_app/Features/Home/Presentation/views/widgets/BookImage.dart';
+import 'package:bookly_app/Features/Home/Presentation/views/widgets/BookListView.dart';
 import 'package:bookly_app/Features/Home/Presentation/views/widgets/BookRating.dart';
-import 'package:bookly_app/Features/Home/Presentation/views/widgets/CustomBookImage.dart';
+import 'package:bookly_app/core/utils/styles.dart';
 import 'package:flutter/material.dart';
-
-import '../../../../../core/utils/assets.dart';
-import '../../../../../core/utils/styles.dart';
 import 'BuildCustomButton.dart';
-import 'CustomButton.dart';
+
 
 class BookDetailsViewBody extends StatelessWidget {
   const BookDetailsViewBody({super.key});
@@ -15,34 +15,24 @@ class BookDetailsViewBody extends StatelessWidget {
     var width = MediaQuery.of(context).size.width;
     return Column(
       children: [
-        Padding(
-          padding: EdgeInsets.symmetric(horizontal: width * 0.22, vertical: 26),
-          child: const CustomBookImage(
-            imageData: AssetsData.test,
-          ),
-        ),
-        const Text(
-          'The Jungle Book',
-          style: Styles.textStyle30,
-        ),
-        const SizedBox(
-          height: 3,
-        ),
-        Opacity(
-          opacity: 0.7,
-          child: Text(
-            'Rudyard Kipling',
-            style: Styles.textStyle18.copyWith(
-              fontStyle: FontStyle.italic,
-              fontWeight: FontWeight.w500,
-            ),
-          ),
-        ),
+        BookImage(width: width),
+        const BookDescription(),
         const SizedBox(height: 12,),
         const BookRating(mainAxisAlignment: MainAxisAlignment.center,),
         const SizedBox(height: 12,),
         const BuildCustomButton(),
+        const SizedBox(height: 12,),
+        Align(alignment:Alignment.topLeft ,child: Text('You can also like' , style: Styles.textStyle20.copyWith(fontWeight: FontWeight.w700),)),
+        const SizedBox(height: 12,),
+        const BookListView(factor: 0.18),
+        const SizedBox(height: 40,),
+        
       ],
     );
   }
 }
+
+
+
+
+

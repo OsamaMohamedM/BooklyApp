@@ -17,16 +17,19 @@ class CustomButton extends StatelessWidget {
   final double fontSize;
   @override
   Widget build(BuildContext context) {
-    return TextButton(
-      onPressed: () {},
-      style: TextButton.styleFrom(
-        backgroundColor: backGroundColor,
-        shape: RoundedRectangleBorder(borderRadius: borderRadius),
-      ),
-      child: Text(
-        textName,
-        style: Styles.textStyle18
-            .copyWith(color: textColor, fontWeight: FontWeight.w900 ,fontSize:fontSize ),
+    return SizedBox(
+      height: 48,
+      child: TextButton(
+        onPressed: () {},
+        style: TextButton.styleFrom(
+          backgroundColor: backGroundColor,
+          shape: RoundedRectangleBorder(borderRadius: borderRadius),
+        ),
+        child: Text(
+          textName,
+          style: Styles.textStyle18
+              .copyWith(color: textColor, fontWeight: FontWeight.w900 ,fontSize:fontSize ),
+        ),
       ),
     );
   }

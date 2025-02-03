@@ -7,14 +7,14 @@ class BuildCustomButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Padding(
-      padding: EdgeInsets.all(8.0),
+      padding: EdgeInsets.symmetric(horizontal: 40.0),
       child: Row(
         children: [
           Expanded(
               child: CustomButton(
             borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(12),
-              bottomLeft: Radius.circular(12),
+              topLeft: Radius.circular(14),
+              bottomLeft: Radius.circular(14),
             ),
             backGroundColor: Colors.white,
             textColor: Colors.black,
@@ -24,8 +24,8 @@ class BuildCustomButton extends StatelessWidget {
           Expanded(
               child: CustomButton(
                   borderRadius: BorderRadius.only(
-                    topRight: Radius.circular(12),
-                    bottomRight: Radius.circular(12),
+                    topRight: Radius.circular(14),
+                    bottomRight: Radius.circular(14),
                   ),
                   backGroundColor: Color(0xffEF8262),
                   textColor: Colors.white,
