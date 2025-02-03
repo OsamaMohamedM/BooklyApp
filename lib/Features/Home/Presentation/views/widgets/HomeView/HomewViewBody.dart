@@ -1,6 +1,10 @@
+import 'package:bookly_app/Features/Home/Presentation/views/widgets/HomeView/BestSallerItem/BestSallerItemView.dart';
+import 'package:bookly_app/Features/Home/Presentation/views/widgets/HomeView/BestSallerItem/BestSallerListView.dart';
 import 'package:bookly_app/core/utils/styles.dart';
 import 'package:flutter/material.dart';
-import 'BestSallerItem/BestSallerListView.dart';
+import 'package:go_router/go_router.dart';
+import '../../../../../../core/utils/AppRoutes.dart';
+
 import '../BookListView.dart';
 import 'CustomAppBar.dart';
 
@@ -11,7 +15,7 @@ class HomewViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return const CustomScrollView(
       slivers: [
-        SliverToBoxAdapter(
+         SliverToBoxAdapter(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -27,10 +31,9 @@ class HomewViewBody extends StatelessWidget {
             ],
           ),
         ),
-        SliverFillRemaining(
-          child: BestSallerListView(),
-        )
+             BestSallerListView(),
       ],
     );
   }
 }
+
