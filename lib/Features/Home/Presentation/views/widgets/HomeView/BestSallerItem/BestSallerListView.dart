@@ -1,11 +1,11 @@
-import 'package:bookly_app/Features/Home/Presentation/views/widgets/HomeView/BestSallerItem/BestSallerItemView.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../../../../../core/utils/AppRoutes.dart';
+import '../../BestSallerItemView.dart';
 
-class BestSallerListView extends StatelessWidget {
-  const BestSallerListView({
+class BookDataListView extends StatelessWidget {
+  const BookDataListView({
     super.key,
   });
 
@@ -18,7 +18,7 @@ class BestSallerListView extends StatelessWidget {
               onTap: () {
                 GoRouter.of(context).push(AppRoutes.bookDetails);
               },
-              child: const BestSellerListViewItem());
+              child: const BookListViewItem());
         },
         childCount: 15,
       ),

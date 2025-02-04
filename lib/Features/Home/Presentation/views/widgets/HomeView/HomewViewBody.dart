@@ -11,13 +11,14 @@ class HomewViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return const CustomScrollView(
       slivers: [
-         SliverToBoxAdapter(
+        SliverToBoxAdapter(
           child: Column(
-            
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               CustomAppBar(),
-              BookListView(factor: 0.25,),
+              BookListView(
+                factor: 0.25,
+              ),
               SizedBox(
                 height: 30,
               ),
@@ -28,9 +29,8 @@ class HomewViewBody extends StatelessWidget {
             ],
           ),
         ),
-             BestSallerListView(),
+        BookDataListView(),
       ],
     );
   }
 }
-
