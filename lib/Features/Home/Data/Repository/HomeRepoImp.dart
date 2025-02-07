@@ -1,27 +1,39 @@
-import 'package:bookly_app/Features/Home/Data/Models/BookModel/BookModel.dart';
+
 import 'package:bookly_app/Features/Home/Data/Repository/HomeRepo.dart';
-import 'package:bookly_app/core/errors/Faliure.dart';
 import 'package:bookly_app/core/utils/ApisServices.dart';
 import 'package:dartz/dartz.dart';
+import 'package:dio/dio.dart';
+import '../../../../core/errors/Faliure.dart';
+import '../../../../core/errors/FaliureException.dart';
+import '../../../../core/errors/ServerFaliure.dart';
+import '../Models/BookModel/BookModel.dart';
 
 class Homerepoimp extends HomeRepo {
-  final Apisservices apisservices = Apisservices();
+  final Apisservices apiService;
+
+  Homerepoimp(this.apiService);
+
   @override
   Future<Either<Faliure, List<BookModel>>> fetchNewestBooks() async {
-    try{
-      
-    var response = await apisservices.get(
-        'volumes?Filtering=free-ebook&Sorting=newest &q=subject:Programming');
-    List<BookModel> books = (response['items'] as List<dynamic>)
-        .map((item) => BookModel.fromJson(item))
-        .toList();
-    return right(books);
-  }catch(e)
-  {
-
-  }
+    return _fetchBooks('volumes?Filtering=free-ebook&Sorting=newest&q=subject:Programming');
   }
 
   @override
-  Future<Either<Faliure, List<BookModel>>> fetchFeaturedBooks() {}
+  Future<Either<Faliure, List<BookModel>>> fetchFeaturedBooks() async {
+    return _fetchBooks('volumes?Filtering=free-ebook&q=subject:Programming');
+  }
+
+  Future<Either<Faliure, List<BookModel>>> _fetchBooks(String endpoint) async {
+    try {
+      var response = await apiService.get(endpoint);
+      List<BookModel> books = (response['items'] as List<dynamic>)
+          .map((item) => BookModel.fromJson(item))
+          .toList();
+      return right(books);
+    } on DioException catch (e) {
+      return left(ServerFaliure.DioException(e));
+    } catch (e) {
+      return left(FaliureException('Something went wrong. Please try again.'));
+    }
+  }
 }
