@@ -23,13 +23,13 @@ class HomewViewBody extends StatelessWidget {
                 height: 30,
               ),
               Text(
-                'Best Seller',
+                'Newest Books',
                 style: Styles.textStyle18,
               ),
             ],
           ),
         ),
-        BookDataListView(),
+        BookWithDetailsListView(),
       ],
     );
   }

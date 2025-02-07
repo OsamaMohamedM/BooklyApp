@@ -10,7 +10,7 @@ class SearchViewBody extends StatelessWidget {
     return const CustomScrollView(
       slivers: [
         SliverToBoxAdapter(child: TextFieldSection()),
-        BookDataListView()
+        BookWithDetailsListView()
       ],
     );
   }

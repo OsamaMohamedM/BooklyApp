@@ -4,8 +4,8 @@ import 'package:go_router/go_router.dart';
 import '../../../../../../../core/utils/AppRoutes.dart';
 import '../../BestSallerItemView.dart';
 
-class BookDataListView extends StatelessWidget {
-  const BookDataListView({
+class BookWithDetailsListView extends StatelessWidget {
+  const BookWithDetailsListView({
     super.key,
   });
 
