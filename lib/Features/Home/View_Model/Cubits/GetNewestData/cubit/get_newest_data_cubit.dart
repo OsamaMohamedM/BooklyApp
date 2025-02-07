@@ -6,8 +6,8 @@ import 'package:bookly_app/core/utils/ApisServices.dart';
 part 'get_newest_data_state.dart';
 
 class GetNewestDataCubit extends Cubit<GetNewestDataState> {
-  HomeRepo homeRepo = HomeRepoImp(Apisservices());
-  GetNewestDataCubit() : super(GetNewestDataInitial());
+  HomeRepo homeRepo;
+  GetNewestDataCubit(this.homeRepo) : super(GetNewestDataInitial());
 
   Future<void> getNewestBooks() async {
     var result = await homeRepo.fetchNewestBooks();
