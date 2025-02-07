@@ -33,7 +33,8 @@ class Homerepoimp extends HomeRepo {
     } on DioException catch (e) {
       return left(ServerFaliure.DioException(e));
     } catch (e) {
-      return left(FaliureException('Something went wrong. Please try again.'));
+      return left(FaliureException('Something went wrong. Please try again.!'));
     }
+
   }
 }
