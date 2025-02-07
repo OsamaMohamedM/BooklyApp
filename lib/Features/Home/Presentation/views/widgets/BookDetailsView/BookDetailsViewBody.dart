@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 import 'BookDetailsSection.dart';
@@ -16,7 +15,7 @@ class BookDetailsViewBody extends StatelessWidget {
             children: [
               BookDetailsSection(),
               Expanded(
-                child: SizedBox(
+                  child: SizedBox(
                 height: 12,
               )),
               BooksSimmillar(),

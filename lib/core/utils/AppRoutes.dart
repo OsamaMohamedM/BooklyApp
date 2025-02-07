@@ -16,8 +16,6 @@ abstract class AppRoutes {
     GoRoute(
         path: bookDetails,
         builder: (context, state) => const BookDetailsView()),
-    GoRoute(
-        path: searchView,
-        builder: (context, state) => const SearchView()),
+    GoRoute(path: searchView, builder: (context, state) => const SearchView()),
   ]);
 }

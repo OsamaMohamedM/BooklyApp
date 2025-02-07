@@ -5,7 +5,7 @@ import '../../../../../core/utils/AppRoutes.dart';
 import 'CustomBookImage.dart';
 
 class BookListView extends StatelessWidget {
-  const BookListView({super.key , required this.factor});
+  const BookListView({super.key, required this.factor});
   final num factor;
   @override
   Widget build(BuildContext context) {

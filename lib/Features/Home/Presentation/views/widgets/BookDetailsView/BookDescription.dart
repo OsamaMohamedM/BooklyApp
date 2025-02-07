@@ -3,13 +3,13 @@ import 'package:flutter/material.dart';
 import '../../../../../../core/utils/styles.dart';
 
 class BookDescription extends StatelessWidget {
-const BookDescription({ super.key });
+  const BookDescription({super.key});
 
   @override
-  Widget build(BuildContext context){
-    return   Column(
+  Widget build(BuildContext context) {
+    return Column(
       children: [
-    const Text(
+        const Text(
           'The Jungle Book',
           style: Styles.textStyle30,
         ),

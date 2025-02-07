@@ -11,27 +11,26 @@ class TextFieldSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 14.0),
-              child: Column(
-    crossAxisAlignment: CrossAxisAlignment.start,
-    children: [
-      SizedBox(
-        height: 25,
+      padding: EdgeInsets.symmetric(horizontal: 14.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          SizedBox(
+            height: 25,
+          ),
+          CutsomTextField(),
+          SizedBox(
+            height: 15,
+          ),
+          Text(
+            "Result",
+            style: Styles.textStyle18,
+          ),
+          SizedBox(
+            height: 15,
+          ),
+        ],
       ),
-      CutsomTextField(),
-      SizedBox(
-        height: 15,
-      ),
-      Text(
-        "Result",
-        style: Styles.textStyle18,
-      ),
-      SizedBox(
-        height: 15,
-      ),
-    ],
-              ),
-            );
+    );
   }
 }
-

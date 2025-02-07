@@ -7,16 +7,11 @@ class SearchViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  const CustomScrollView(
+    return const CustomScrollView(
       slivers: [
-        SliverToBoxAdapter(
-            child: TextFieldSection()
-            ),
-         BookDataListView()
+        SliverToBoxAdapter(child: TextFieldSection()),
+        BookDataListView()
       ],
     );
   }
 }
-
-
-

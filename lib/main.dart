@@ -4,7 +4,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'core/utils/Colors.dart';
 
 void main() {
-  
   runApp(const MyApp());
 }
 
