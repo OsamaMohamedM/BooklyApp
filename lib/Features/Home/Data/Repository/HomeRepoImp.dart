@@ -8,10 +8,10 @@ import '../../../../core/errors/FaliureException.dart';
 import '../../../../core/errors/ServerFaliure.dart';
 import '../Models/BookModel/BookModel.dart';
 
-class Homerepoimp extends HomeRepo {
+class HomeRepoImp extends HomeRepo {
   final Apisservices apiService;
 
-  Homerepoimp(this.apiService);
+  HomeRepoImp(this.apiService);
 
   @override
   Future<Either<Faliure, List<BookModel>>> fetchNewestBooks() async {
