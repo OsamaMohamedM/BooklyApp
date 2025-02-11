@@ -28,7 +28,7 @@ class BookDetailsSection extends StatelessWidget {
         const SizedBox(
           height: 12,
         ),
-         BuildCustomButton(price :this.bookModel.saleInfo!.price),
+         BuildCustomButton( bookModel:this.bookModel),
       ],
     );
   }

@@ -1,4 +1,4 @@
-import 'package:bookly_app/Features/Home/Presentation/views/widgets/HomeView/BestSallerItem/NewestBooksListView.dart';
+import 'package:bookly_app/Features/Home/Presentation/views/widgets/HomeView/NewestItem/NewestBooksListView.dart';
 import 'package:bookly_app/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import '../BookListView.dart';

@@ -28,5 +28,5 @@ class SaleInfo {
         'listPrice': listPrice,
         'retailPrice': retailPrice
       };
-  get price => (listPrice==null ? 'Not for Sale' : '${listPrice!['amount']!}  ${listPrice!['currencyCode']!}');
+  get price => (listPrice==null ? 'Free' : '${listPrice!['amount']!}  ${listPrice!['currencyCode']!}');
 }
