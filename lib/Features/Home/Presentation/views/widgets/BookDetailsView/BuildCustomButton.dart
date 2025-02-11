@@ -1,28 +1,30 @@
+import 'package:bookly_app/Features/Home/Data/Models/BookModel/BookModel.dart';
 import 'package:flutter/material.dart';
 
 import 'CustomButton.dart';
 
 class BuildCustomButton extends StatelessWidget {
-  const BuildCustomButton({super.key});
+  final String price;
+  const BuildCustomButton({required this.price , super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
+    return  Padding(
       padding: EdgeInsets.symmetric(horizontal: 40.0),
       child: Row(
         children: [
           Expanded(
               child: CustomButton(
-            borderRadius: BorderRadius.only(
+            borderRadius: const BorderRadius.only(
               topLeft: Radius.circular(14),
               bottomLeft: Radius.circular(14),
             ),
             backGroundColor: Colors.white,
             textColor: Colors.black,
-            textName: '19.99\$',
+            textName: price,
             fontSize: 18,
           )),
-          Expanded(
+          const Expanded(
               child: CustomButton(
                   borderRadius: BorderRadius.only(
                     topRight: Radius.circular(14),

@@ -4,11 +4,10 @@ import 'package:bookly_app/core/utils/ApisServices.dart';
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
 
-GetIt getIt = GetIt.instance;
+final getIt = GetIt.instance;
 
-void setUp()
-{
-   getIt.registerSingleton<Apisservices>(Apisservices(Dio()));
-   getIt.registerSingleton<HomeRepo>(HomeRepoImp(getIt.get<Apisservices>()));
-  
+void setUp() {
+  getIt.registerSingleton<Dio>(Dio());
+  getIt.registerSingleton<Apisservices>(Apisservices(getIt.get<Dio>()));
+  getIt.registerSingleton<HomeRepo>(HomeRepoImp(getIt.get<Apisservices>()));
 }

@@ -17,7 +17,7 @@ class BooksSimmillar extends StatelessWidget {
         const SizedBox(
           height: 12,
         ),
-        const BookListView(factor: 0.18),
+        const BookListView(),
       ],
     );
   }

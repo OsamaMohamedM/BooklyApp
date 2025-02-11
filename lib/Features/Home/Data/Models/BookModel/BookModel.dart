@@ -1,6 +1,5 @@
 import 'access_info.dart';
 import 'sale_info.dart';
-import 'search_info.dart';
 import 'volume_info.dart';
 
 class BookModel {
@@ -11,7 +10,6 @@ class BookModel {
   VolumeInfo? volumeInfo;
   SaleInfo? saleInfo;
   AccessInfo? accessInfo;
-  SearchInfo? searchInfo;
 
   BookModel({
     this.kind,
@@ -21,7 +19,6 @@ class BookModel {
     this.volumeInfo,
     this.saleInfo,
     this.accessInfo,
-    this.searchInfo,
   });
 
   factory BookModel.fromJson(Map<String, dynamic> json) => BookModel(
@@ -38,9 +35,6 @@ class BookModel {
         accessInfo: json['accessInfo'] == null
             ? null
             : AccessInfo.fromJson(json['accessInfo'] as Map<String, dynamic>),
-        searchInfo: json['searchInfo'] == null
-            ? null
-            : SearchInfo.fromJson(json['searchInfo'] as Map<String, dynamic>),
       );
 
   Map<String, dynamic> toJson() => {
@@ -51,6 +45,5 @@ class BookModel {
         'volumeInfo': volumeInfo?.toJson(),
         'saleInfo': saleInfo?.toJson(),
         'accessInfo': accessInfo?.toJson(),
-        'searchInfo': searchInfo?.toJson(),
       };
 }

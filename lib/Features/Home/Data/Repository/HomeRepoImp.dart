@@ -1,4 +1,4 @@
-
+import 'package:bookly_app/Features/Home/Data/Models/BookModel/BookModel.dart';
 import 'package:bookly_app/Features/Home/Data/Repository/HomeRepo.dart';
 import 'package:bookly_app/core/utils/ApisServices.dart';
 import 'package:dartz/dartz.dart';
@@ -6,8 +6,6 @@ import 'package:dio/dio.dart';
 import '../../../../core/errors/Faliure.dart';
 import '../../../../core/errors/FaliureException.dart';
 import '../../../../core/errors/ServerFaliure.dart';
-import '../Models/BookModel/BookModel.dart';
-
 class HomeRepoImp extends HomeRepo {
   final Apisservices apiService;
 
@@ -15,7 +13,8 @@ class HomeRepoImp extends HomeRepo {
 
   @override
   Future<Either<Faliure, List<BookModel>>> fetchNewestBooks() async {
-    return _fetchBooks('volumes?Filtering=free-ebook&Sorting=newest&q=subject:Programming');
+    return _fetchBooks(
+        'volumes?Filtering=free-ebook&Sorting=newest&q=subject:Programming');
   }
 
   @override
@@ -35,6 +34,5 @@ class HomeRepoImp extends HomeRepo {
     } catch (e) {
       return left(FaliureException('Something went wrong. Please try again.!'));
     }
-
   }
 }

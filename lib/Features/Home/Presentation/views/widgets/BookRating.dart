@@ -5,33 +5,28 @@ import '../../../../../core/utils/Colors.dart';
 import '../../../../../core/utils/styles.dart';
 
 class BookRating extends StatelessWidget {
+  final  int pageCount;
+  final String lan;
   const BookRating(
-      {super.key, this.mainAxisAlignment = MainAxisAlignment.start});
+      {super.key, this.mainAxisAlignment = MainAxisAlignment.start, required this.pageCount, required this.lan});
 
   final MainAxisAlignment mainAxisAlignment;
   @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: mainAxisAlignment,
-      children: const [
-        Icon(
-          FontAwesomeIcons.solidStar,
-          color: MyColors.StarColor,
-        ),
-        SizedBox(
-          width: 15,
-        ),
+      children:  [
         Text(
-          '4.8',
+         lan,
           style: Styles.textStyle16,
         ),
-        SizedBox(
-          width: 2,
+       const  SizedBox(
+          width: 5,
         ),
         Opacity(
           opacity: 0.7,
           child: Text(
-            '(1511)',
+           '  ($pageCount)',
             style: Styles.textStyle14,
           ),
         ),

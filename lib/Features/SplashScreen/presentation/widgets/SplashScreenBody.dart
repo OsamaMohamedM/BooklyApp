@@ -1,9 +1,6 @@
 // ignore_for_file: non_constant_identifier_names
 
-import 'package:bookly_app/Features/Home/Presentation/views/Home.dart';
-
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:go_router/go_router.dart';
 import '../../../../core/utils/AppRoutes.dart';
 import '../../../../core/utils/assets.dart';
@@ -46,7 +43,7 @@ class _SplashScreenBodyState extends State<SplashScreenBody> {
 
   void NavigateToHome() {
     Future.delayed(const Duration(seconds: 2), () {
-      GoRouter.of(context).push(AppRoutes.homeScreen);
+      GoRouter.of(context).pushReplacement(AppRoutes.homeScreen);
     });
   }
 }

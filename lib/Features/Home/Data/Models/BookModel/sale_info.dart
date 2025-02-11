@@ -2,21 +2,31 @@ class SaleInfo {
   String? country;
   String? saleability;
   bool? isEbook;
-  String? buyLink;
-
-  SaleInfo({this.country, this.saleability, this.isEbook, this.buyLink});
+  Map<String, String>? listPrice;
+  Map<String, String>? retailPrice;
+  SaleInfo(
+      {this.country,
+      this.saleability,
+      this.isEbook,
+      this.listPrice,
+      this.retailPrice});
 
   factory SaleInfo.fromJson(Map<String, dynamic> json) => SaleInfo(
         country: json['country'] as String?,
         saleability: json['saleability'] as String?,
         isEbook: json['isEbook'] as bool?,
-        buyLink: json['buyLink'] as String?,
+        listPrice: (json['listPrice'] as Map<String, dynamic>?)
+            ?.map((key, value) => MapEntry(key, value.toString())),
+        retailPrice: (json['retailPrice'] as Map<String, dynamic>?)
+            ?.map((key, value) => MapEntry(key, value.toString())),
       );
 
   Map<String, dynamic> toJson() => {
         'country': country,
         'saleability': saleability,
         'isEbook': isEbook,
-        'buyLink': buyLink,
+        'listPrice': listPrice,
+        'retailPrice': retailPrice
       };
+  get price => (listPrice==null ? 'Not for Sale' : '${listPrice!['amount']!}  ${listPrice!['currencyCode']!}');
 }

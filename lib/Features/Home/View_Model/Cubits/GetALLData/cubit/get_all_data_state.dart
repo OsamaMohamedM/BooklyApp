@@ -1,17 +1,24 @@
-part of 'get_all_data_cubit.dart';
+import 'package:bookly_app/Features/Home/Data/Models/BookModel/BookModel.dart';
+import 'package:flutter/material.dart';
 
-abstract class GetFeaturedState {}
+abstract class GetFeaturedState {
+  const GetFeaturedState();
+}
 
-class GetFeaturedInitial extends GetFeaturedState {}
+class GetFeaturedInitial extends GetFeaturedState {
+  const GetFeaturedInitial();
+}
+
+class GetFeaturedLoading extends GetFeaturedState {
+  const GetFeaturedLoading();
+}
 
 class GetFeaturedSuccess extends GetFeaturedState {
-  List<BookModel> books;
-  GetFeaturedSuccess(this.books);
+  final List<BookModel> books;
+  const GetFeaturedSuccess(this.books);
 }
 
-class GetFeaturedFaliure extends GetFeaturedState {
-  String errorMessage;
-  GetFeaturedFaliure(this.errorMessage);
+class GetFeaturedFailure extends GetFeaturedState {
+  final String errorMessage;
+  const GetFeaturedFailure(this.errorMessage);
 }
-
-class GetFeaturedLoding extends GetFeaturedState {}
